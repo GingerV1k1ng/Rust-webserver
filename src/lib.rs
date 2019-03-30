@@ -45,7 +45,8 @@ impl ThreadPool{
             sender,
         }
     }
-
+    /// Define the functions that is going to be in a ThreadPool
+    /// 
     pub fn execute<F>(&self, f: F)
         where
             F:FnOnce() + Send + 'static
